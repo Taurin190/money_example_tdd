@@ -1,10 +1,13 @@
 abstract class Money {
     protected int amount;
+    protected String currency;
     abstract Money times(int multiplier);
-    abstract String currency();
     public boolean equals(Object object) {
         Money dollar = (Money) object;
         return amount == dollar.amount && getClass().equals(object.getClass());
+    }
+    String currency() {
+        return currency;
     }
     static public Money dollar(int amount) {
         return new Dollar(amount);
