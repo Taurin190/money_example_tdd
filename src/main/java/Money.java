@@ -10,7 +10,7 @@ abstract class Money {
         return currency;
     }
     static public Money dollar(int amount) {
-        return new Dollar(amount);
+        return new Dollar(amount, "USD");
     }
     static public Money franc(int amount) {
         return new Franc(amount, "CHF");
